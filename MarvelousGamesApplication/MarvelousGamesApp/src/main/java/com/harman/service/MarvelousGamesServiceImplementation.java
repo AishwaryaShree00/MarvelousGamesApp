@@ -13,8 +13,8 @@ import org.springframework.web.client.RestTemplate;
 public class MarvelousGamesServiceImplementation implements MarvelousGamesService {
 
 	private RestTemplate restTemplate = new RestTemplate();
-	private TreeMap<String, Integer> character = new TreeMap<String, Integer>(); //for storing characters
-	private TreeMap<String, Integer> characterCount = new TreeMap<String, Integer>(); //for storing character counts
+	private TreeMap<String, Integer> character = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER); //for storing characters
+	private TreeMap<String, Integer> characterCount = new TreeMap<String, Integer>(String.CASE_INSENSITIVE_ORDER); //for storing character counts
 
 	private String url1 = "http://www.mocky.io/v2/5ecfd5dc3200006200e3d64b";
 	private String url2 = "http://www.mocky.io/v2/5ecfd6473200009dc1e3d64e";
